@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "Samples with new TypeScript features.",
   "scripts": {
-    "start": "node_modules\\.bin\\tsc && node_modules\\.bin\\http-server",
-    "watch": "node_modules/.bin/tsc -w"
+    "start": "tsc && http-server",
+    "watch": "concurrently --kill-others \"tsc -w\" \"http-server\""
   },
   "main": "index.js",
   "author": "Pablo Núñez <pablonete@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^3.1.0",
     "http-server": "^0.9.0",
     "typescript": "^2.0.3"
   },
