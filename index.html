@@ -8,10 +8,10 @@
     <div class="app">
     </div>
 
-    <script src="./node_modules/requirejs/require.js"></script>
-    <script src="./dist/require-config.js"></script>
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="./dist/config.js"></script>
     <script>
-        require(["app"]);
+      System.import("app.js");
     </script>
   </body>
 </html>
